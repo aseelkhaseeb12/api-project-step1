@@ -8,19 +8,24 @@ namespace KASHOP.PL.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        GenericRepository<Category> repo = new GenericRepository<Category>();
+        private readonly IGenericRepository<Category> _repository;
+
+        public CategoriesController(IGenericRepository<Category> repository)
+        {
+            _repository = repository;
+        }
 
         [HttpGet("")]
         public IActionResult Index()
         {
-            var categories = repo.Get();
+            var categories = _repository.Get();
             return Ok(categories);
         }
 
         [HttpPost("")]
         public IActionResult Create(Category category)
         {
-            repo.Create(category);
+            _repository.Create(category);
 
             return Ok();
         }

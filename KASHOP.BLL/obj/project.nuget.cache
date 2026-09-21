@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XuPlVl2QCr4=",
+  "dgSpecHash": "J8V/15D9bLA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step1\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj",
+  "projectFilePath": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step2\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aseel\\.nuget\\packages\\azure.core\\1.41.0\\azure.core.1.41.0.nupkg.sha512",
     "C:\\Users\\Aseel\\.nuget\\packages\\azure.identity\\1.12.1\\azure.identity.1.12.1.nupkg.sha512",

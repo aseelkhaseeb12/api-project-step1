@@ -1,5 +1,6 @@
 ﻿using KASHOP.DAL.Data;
 using KASHOP.DAL.Models;
+using KASHOP.DAL.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,27 +10,24 @@ namespace KASHOP.PL.Controllers
     [ApiController]
     public class BrandsController : ControllerBase
     {
-        ApplicationDbContext context = new ApplicationDbContext();
+        private readonly IGenericRepository<Brand> _repository;
+
+        public BrandsController(IGenericRepository<Brand> repository)
+        {
+            _repository = repository;
+        }
 
         [HttpGet("")]
         public IActionResult Index()
         {
-            var brands = context.Brands.Where(b => b.Status == true).AsNoTracking().ToList();
+            var brands = _repository.Get();
             return Ok(brands);
-        }
-
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
-        {
-            var brand = context.Brands.Find(id);
-            return Ok(brand);
         }
 
         [HttpPost("")]
         public IActionResult Create(Brand brand)
         {
-            context.Brands.Add(brand);
-            context.SaveChanges();
+            _repository.Create(brand);
 
             return Ok();
         }

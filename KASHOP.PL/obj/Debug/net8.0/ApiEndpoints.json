@@ -26,54 +26,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "KASHOP.PL.Controllers.BrandsController",
-    "Method": "GetById",
-    "RelativePath": "api/Brands/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "KASHOP.PL.Controllers.BrandsController",
-    "Method": "Update",
-    "RelativePath": "api/Brands/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "KASHOP.PL.Controllers.BrandsController",
-    "Method": "Delete",
-    "RelativePath": "api/Brands/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "KASHOP.PL.Controllers.CategoriesController",
     "Method": "Index",
     "RelativePath": "api/Categories",
@@ -94,54 +46,6 @@
       {
         "Name": "category",
         "Type": "KASHOP.DAL.Models.Category",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "KASHOP.PL.Controllers.CategoriesController",
-    "Method": "GetById",
-    "RelativePath": "api/Categories/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "KASHOP.PL.Controllers.CategoriesController",
-    "Method": "Update",
-    "RelativePath": "api/Categories/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "KASHOP.PL.Controllers.CategoriesController",
-    "Method": "Delete",
-    "RelativePath": "api/Categories/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
