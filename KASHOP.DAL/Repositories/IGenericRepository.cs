@@ -2,9 +2,9 @@
 {
     public interface IGenericRepository<T> where T : class
     {
-        void Create(T entity);
-        void Update(T entity);
-        void Remove(T entity);
-        List<T> Get();
+        Task CreateAsync(T entity, CancellationToken cancellationToken = default);
+        Task UpdateAsync(T entity, CancellationToken cancellationToken = default);
+        Task RemoveAsync(T entity, CancellationToken cancellationToken = default);
+        Task<List<T>> GetAsync(CancellationToken cancellationToken = default);
     }
 }

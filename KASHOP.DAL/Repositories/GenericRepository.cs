@@ -12,27 +12,27 @@ namespace KASHOP.DAL.Repositories
             _context = context;
         }
 
-        public void Create(T entity)
+        public async Task CreateAsync(T entity, CancellationToken cancellationToken = default)
         {
-            _context.Set<T>().Add(entity);
-            _context.SaveChanges();
+            await _context.Set<T>().AddAsync(entity, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
         }
 
-        public void Update(T entity)
+        public async Task UpdateAsync(T entity, CancellationToken cancellationToken = default)
         {
             _context.Set<T>().Update(entity);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync(cancellationToken);
         }
 
-        public void Remove(T entity)
+        public async Task RemoveAsync(T entity, CancellationToken cancellationToken = default)
         {
             _context.Set<T>().Remove(entity);
-            _context.SaveChanges(); 
+            await _context.SaveChangesAsync(cancellationToken); 
         }
 
-        public List<T> Get()
+        public async Task<List<T>> GetAsync(CancellationToken cancellationToken = default)
         {
-            var entities = _context.Set<T>().AsNoTracking().ToList();
+            var entities = await _context.Set<T>().AsNoTracking().ToListAsync(cancellationToken);
             return entities;
         }
     }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step2\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj": {}
+    "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step3\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step2\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj": {
+    "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step3\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step2\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step3\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj",
         "projectName": "KASHOP.DAL",
-        "projectPath": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step2\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj",
+        "projectPath": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step3\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj",
         "packagesPath": "C:\\Users\\Aseel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step2\\KASHOP\\KASHOP.DAL\\obj\\",
+        "outputPath": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step3\\KASHOP\\KASHOP.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
