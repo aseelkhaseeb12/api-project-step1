@@ -15,12 +15,19 @@ namespace KASHOP.BLL
         }
         public async Task<List<CategoryResponse>> GetAllAsync(CancellationToken cancellationToken = default)
         {
-            var categories = await _repository.GetAsync(cancellationToken);
+            var categories = await _repository.GetAsync(cancellationToken: cancellationToken);
             return categories.Adapt<List<CategoryResponse>>();
         }
 
         public async Task<bool> CreateAsync(CategoryRequest request, CancellationToken cancellationToken = default)
         {
+            var exists = await _repository.GetOneAsync(
+                cancellationToken: cancellationToken,
+                filter: c => c.Name.ToLower() == request.Name.ToLower()
+            );
+
+            if (exists is not null) return false;
+
             var category = request.Adapt<Category>();
             await _repository.CreateAsync(category, cancellationToken);
             return true;

@@ -1,5 +1,6 @@
 ﻿using KASHOP.DAL.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace KASHOP.DAL.Repositories
 {
@@ -30,10 +31,52 @@ namespace KASHOP.DAL.Repositories
             await _context.SaveChangesAsync(cancellationToken); 
         }
 
-        public async Task<List<T>> GetAsync(CancellationToken cancellationToken = default)
+        public async Task<List<T>> GetAsync(Expression<Func<T,bool>>? filter = null, 
+            List<Expression<Func<T, object>>>? includes = null,
+            bool tracked = false,
+            CancellationToken cancellationToken = default)
         {
-            var entities = await _context.Set<T>().AsNoTracking().ToListAsync(cancellationToken);
-            return entities;
+            IQueryable<T> query = _context.Set<T>().AsQueryable();
+
+            if (!tracked)
+                query.AsNoTracking();
+
+            if (filter is not null)
+                query.Where(filter);
+
+            if (includes is not null)
+            {
+                foreach(var include in includes)
+                {
+                    query.Include(include);
+                }
+            }
+
+            return await query.ToListAsync(cancellationToken);
+        }
+
+        public async Task<T> GetOneAsync(Expression<Func<T, bool>> filter = null,
+            List<Expression<Func<T, object>>>? includes = null,
+            bool tracked = false,
+            CancellationToken cancellationToken = default)
+        {
+            IQueryable<T> query = _context.Set<T>().AsQueryable();
+
+            if (!tracked)
+                query.AsNoTracking();
+
+            if (filter is not null)
+                query.Where(filter);
+
+            if (includes is not null)
+            {
+                foreach (var include in includes)
+                {
+                    query.Include(include);
+                }
+            }
+
+            return await query.FirstOrDefaultAsync(filter, cancellationToken);
         }
     }
 }
