@@ -17,19 +17,19 @@ namespace KASHOP.PL.Controllers
             _repository = repository;
         }
 
-        [HttpGet("")]
-        public IActionResult Index()
-        {
-            var brands = _repository.Get();
-            return Ok(brands);
-        }
+        //[HttpGet("")]
+        //public IActionResult Index()
+        //{
+        //    var brands = _repository.Get();
+        //    return Ok(brands);
+        //}
 
-        [HttpPost("")]
-        public IActionResult Create(Brand brand)
-        {
-            _repository.Create(brand);
+        //[HttpPost("")]
+        //public IActionResult Create(Brand brand)
+        //{
+        //    _repository.Create(brand);
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
     }
 }

@@ -1,5 +1,6 @@
 ﻿using KASHOP.BLL;
 using KASHOP.DAL.DTO.Requests;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KASHOP.PL.Controllers
@@ -16,17 +17,31 @@ namespace KASHOP.PL.Controllers
         }
 
         [HttpGet("")]
-        public async Task<IActionResult> Index(CancellationToken cancellationToken = default)
+        public async Task<IActionResult> Index(CancellationToken cancellationToken)
         {
             var categories = await _categoryService.GetAllAsync(cancellationToken);
             return Ok(categories);
         }
 
         [HttpPost("")]
-        public async Task<IActionResult> Create(CategoryRequest request)
+        public async Task<IActionResult> Create(CategoryRequest request, CancellationToken cancellationToken)
         {
-            await _categoryService.CreateAsync(request);
-            return Ok();
+            var result = await _categoryService.CreateAsync(request, cancellationToken);
+            return result? Ok() : BadRequest();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id ,CancellationToken cancellationToken)
+        {
+            var result = await _categoryService.GetByIdAsync(id,cancellationToken);
+            return result is not null ? Ok(result) : BadRequest();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)
+        {
+            var result = await _categoryService.DeleteAsync(id, cancellationToken);
+            return result ? NoContent() : BadRequest();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace KASHOP.DAL.Repositories
             List<Expression<Func<T, object>>>? includes = null,
             bool tracked = false,
             CancellationToken cancellationToken = default);
-        Task<T> GetOneAsync(Expression<Func<T, bool>> filter = null,
+        Task<T?> GetOneAsync(Expression<Func<T, bool>> filter = null,
             List<Expression<Func<T, object>>>? includes = null,
             bool tracked = false,
             CancellationToken cancellationToken = default);

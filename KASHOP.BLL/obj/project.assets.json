@@ -47,25 +47,25 @@
           }
         }
       },
-      "Mapster/10.0.13": {
+      "Mapster/7.4.0": {
         "type": "package",
         "dependencies": {
-          "Mapster.Core": "10.0.13"
+          "Mapster.Core": "1.2.1"
         },
         "compile": {
-          "lib/net8.0/Mapster.dll": {}
+          "lib/net7.0/Mapster.dll": {}
         },
         "runtime": {
-          "lib/net8.0/Mapster.dll": {}
+          "lib/net7.0/Mapster.dll": {}
         }
       },
-      "Mapster.Core/10.0.13": {
+      "Mapster.Core/1.2.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Mapster.Core.dll": {}
+          "lib/net7.0/Mapster.Core.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Mapster.Core.dll": {}
+          "lib/net7.0/Mapster.Core.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -1045,32 +1045,31 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "Mapster/10.0.13": {
-      "sha512": "/FaFSm4W6rQp5kEZa7yTtvHH2yGmuC1p22Bg2zi83+W8SMJ+5RBTEWgRK0JS2S8jIdXj2hm2s4z1egjkE2azoQ==",
+    "Mapster/7.4.0": {
+      "sha512": "RYGoDqvS4WTKIq0HDyPBBVIj6N0mluOCXQ1Vk95JKseMHEsbCXSEGKSlP95oL+s42IXAXbqvHj7p0YaRBUcfqg==",
       "type": "package",
-      "path": "mapster/10.0.13",
+      "path": "mapster/7.4.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "icon.png",
-        "lib/net10.0/Mapster.dll",
-        "lib/net8.0/Mapster.dll",
-        "lib/net9.0/Mapster.dll",
-        "lib/netstandard2.0/Mapster.dll",
-        "mapster.10.0.13.nupkg.sha512",
+        "lib/net6.0/Mapster.dll",
+        "lib/net7.0/Mapster.dll",
+        "mapster.7.4.0.nupkg.sha512",
         "mapster.nuspec"
       ]
     },
-    "Mapster.Core/10.0.13": {
-      "sha512": "fLj/MDJy16QiL7IULC0+e2YXh9nNDhtzdNl13R6CI0Qh6181eadA6EHykWkJWgTHdMjC5Ured3fq5x1QV7U9vg==",
+    "Mapster.Core/1.2.1": {
+      "sha512": "11lokmfliBEMMmjeqxFGNpqGXq6tN96zFqpBmfYeahr4Ybk63oDmeJmOflsATjobYkX248g5Y62oQ2NNnZaeww==",
       "type": "package",
-      "path": "mapster.core/10.0.13",
+      "path": "mapster.core/1.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "icon.png",
-        "lib/netstandard2.0/Mapster.Core.dll",
-        "mapster.core.10.0.13.nupkg.sha512",
+        "lib/net6.0/Mapster.Core.dll",
+        "lib/net7.0/Mapster.Core.dll",
+        "mapster.core.1.2.1.nupkg.sha512",
         "mapster.core.nuspec"
       ]
     },
@@ -2746,7 +2745,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "KASHOP.DAL >= 1.0.0",
-      "Mapster >= 10.0.13"
+      "Mapster >= 7.4.0"
     ]
   },
   "packageFolders": {
@@ -2756,11 +2755,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step4\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj",
+      "projectUniqueName": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step5\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj",
       "projectName": "KASHOP.BLL",
-      "projectPath": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step4\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj",
+      "projectPath": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step5\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj",
       "packagesPath": "C:\\Users\\Aseel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step4\\KASHOP\\KASHOP.BLL\\obj\\",
+      "outputPath": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step5\\KASHOP\\KASHOP.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2782,8 +2781,8 @@
           "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step4\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj": {
-              "projectPath": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step4\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj"
+            "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step5\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj": {
+              "projectPath": "C:\\Users\\Aseel\\Documents\\Courses\\Backend\\ASP Dot Net Core\\tasks\\API\\API_Project_Step5\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj"
             }
           }
         }
@@ -2807,7 +2806,7 @@
         "dependencies": {
           "Mapster": {
             "target": "Package",
-            "version": "[10.0.13, )"
+            "version": "[7.4.0, )"
           }
         },
         "imports": [
@@ -2826,7 +2825,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
