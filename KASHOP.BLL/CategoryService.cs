@@ -31,7 +31,7 @@ namespace KASHOP.BLL
             var names = request.Translations.Select(t => t.Name.ToLower()).ToList();
 
             var existing = await _repository.GetOneAsync(
-                //cancellationToken: cancellationToken,
+                cancellationToken: cancellationToken,
                 filter: c => c.Translations.Any(t => names.Contains(t.Name.ToLower()))
             );
 
@@ -65,8 +65,32 @@ namespace KASHOP.BLL
 
         public async Task<bool> UpdateAsync(int id, CategoryRequest request, CancellationToken cancellationToken = default)
         {
-            var category = request.Adapt<Category>();
-            await _repository.UpdateAsync(category, cancellationToken);
+            if (!AreTranslationsValid(request.Translations)) return false;
+
+            var existingCategory = await _repository.GetOneAsync(
+                filter: c => c.Id == id,
+                includes: [c => c.Translations],
+                tracked: true,
+                cancellationToken: cancellationToken
+            );
+
+            if (existingCategory is null) return false;
+
+            var names = request.Translations.Select(t => t.Name.ToLower()).ToList();
+            var duplicate = await _repository.GetOneAsync(
+                cancellationToken: cancellationToken,
+                filter: c => c.Id != id && c.Translations.Any(t => names.Contains(t.Name.ToLower()))
+            );
+
+            if (duplicate is not null) return false;
+
+            existingCategory.Translations.Clear();
+            foreach (var translationRequest in request.Translations)
+            {
+                existingCategory.Translations.Add(translationRequest.Adapt<CategoryTranslations>());
+            }
+
+            await _repository.UpdateAsync(existingCategory, cancellationToken);
             return true;
         }
 

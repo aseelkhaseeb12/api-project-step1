@@ -39,16 +39,16 @@ namespace KASHOP.DAL.Repositories
             IQueryable<T> query = _context.Set<T>().AsQueryable();
 
             if (!tracked)
-                query.AsNoTracking();
+                query = query.AsNoTracking();
 
             if (filter is not null)
-                query.Where(filter);
+                query = query.Where(filter);
 
             if (includes is not null)
             {
                 foreach(var include in includes)
                 {
-                    query.Include(include);
+                    query = query.Include(include);
                 }
             }
 
@@ -63,13 +63,13 @@ namespace KASHOP.DAL.Repositories
             IQueryable<T> query = _context.Set<T>().AsQueryable();
 
             if (!tracked)
-                query.AsNoTracking();
+                query = query.AsNoTracking();
 
             if (includes is not null)
             {
                 foreach (var include in includes)
                 {
-                    query.Include(include);
+                    query = query.Include(include);
                 }
             }
 

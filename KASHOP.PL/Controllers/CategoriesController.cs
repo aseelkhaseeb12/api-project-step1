@@ -1,6 +1,5 @@
 ﻿using KASHOP.BLL;
 using KASHOP.DAL.DTO.Requests;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KASHOP.PL.Controllers
@@ -42,6 +41,13 @@ namespace KASHOP.PL.Controllers
         {
             var result = await _categoryService.DeleteAsync(id, cancellationToken);
             return result ? NoContent() : BadRequest();
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, CategoryRequest request, CancellationToken cancellationToken)
+        {
+            var result = await _categoryService.UpdateAsync(id, request, cancellationToken);
+            return result ? Ok() : BadRequest();
         }
     }
 }
